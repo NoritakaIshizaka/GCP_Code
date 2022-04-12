@@ -3,7 +3,7 @@ import requests
 import google.auth.transport.requests
 import google.oauth2.id_token
 
-def authorized_get_request(target_url, params):
+def authorized_get_request(target_url, params=None):
     '''
     Description
         Cloud Functions(HTTPトリガー)に対して、起動元の認証を実装
@@ -23,7 +23,7 @@ def authorized_get_request(target_url, params):
 
 
 if __name__ == "__main__":
-    target_url ="WRITE Cloud Functions Trigger URL"
+    target_url ="Write Here Cloud Function Trigger URL"
     result = authorized_get_request(
         target_url = target_url,
         params = {
